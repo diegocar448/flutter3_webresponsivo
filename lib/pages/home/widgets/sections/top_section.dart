@@ -76,6 +76,39 @@ class TopSection extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
+                Positioned(
+                  left:20,
+                  top:20,
+                  child: Card(
+                      color: Colors.black,
+                      elevation: 8,
+                      child:Container(
+                        padding: const EdgeInsets.all(22),
+                        width: 350,
+                        child: Column(
+                          children: [
+                            const Text(
+                              'Flutter Web e Mobile Layout',
+                              style: TextStyle(
+                                fontSize: 35,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            const SizedBox(height: 8,),
+                            const Text(
+                              'Layout Flutter para telas de notebooks e tablets, com responsibidade total, mantendo o layout para varios tamanhos de telas',
+                              style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                              ),
+                            ),
+                            CustomSearchField()
+                          ],
+                        ),
+                      ),
+                  ),
+                ),
               ],
             ),
           );
