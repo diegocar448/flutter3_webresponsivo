@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterweb/breakpoints.dart';
 import 'package:flutterweb/pages/home/widgets/custom_search_field.dart';
 
 
@@ -61,6 +62,29 @@ class TopSection extends StatelessWidget {
             ),
           );
         }
+
+        if(maxWidth >= mobileBreakpoint){
+          return SizedBox(
+            height: 320,
+            child:Stack(
+              children: [
+                SizedBox(
+                  height: 250,
+                  width: double.infinity,
+                  child: Image.network(
+                    'https://images.pexels.com/photos/892757/pexels-photo-892757.jpeg?auto=compress&cs=tinysrgb&dpr=26h=650Sw=940',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
+            ),
+          );
+        }
+
+
+
+
+
         // Adicione um retorno para o caso em que a condição não é atendida
         return Container(); // Ou qualquer outro widget desejado
 
