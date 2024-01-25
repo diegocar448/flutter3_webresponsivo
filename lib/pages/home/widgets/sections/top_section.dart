@@ -119,7 +119,43 @@ class TopSection extends StatelessWidget {
 
 
         // Adicione um retorno para o caso em que a condição não é atendida
-        return Container(); // Ou qualquer outro widget desejado
+        return Column(
+          children: [
+            AspectRatio(
+              aspectRatio: 3.4,
+              child: Image.network(
+                'https://images.pexels.com/photos/892757/pexels-photo-892757.jpeg?auto=compress&cs=tinysrgb&dpr=26h=650Sw=940',
+                fit: BoxFit.cover,
+              ),
+            ),
+            Padding(
+              padding:const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Flutter Web e Mobile Layout',
+                    style: TextStyle(
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(height: 8,),
+                  const Text(
+                    'Layout Flutter para telas de notebooks e tablets, com responsibidade total, mantendo o layout para varios tamanhos de telas',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(height: 8,),
+                  CustomSearchField()
+                ],
+              )
+            ),
+          ],
+        ); // Ou qualquer outro widget desejado
 
       }
     );
