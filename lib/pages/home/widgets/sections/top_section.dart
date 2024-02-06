@@ -12,7 +12,7 @@ class TopSection extends StatelessWidget {
         final maxWidth = constraints.maxWidth;
 
         //de 1200 para cima é web, se for menor então será tablet
-        if(maxWidth >= 1200){
+        if(maxWidth >= tabletBreakpoint){
           return AspectRatio(
               aspectRatio: 3.2,
             child: Stack(
